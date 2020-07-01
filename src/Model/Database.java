@@ -82,19 +82,23 @@ public class Database {
     }
 
     public boolean ifUsernameExists(File file, String string) {
+        Scanner scanner = null;
         try {
             File file1 = new File(String.valueOf(file));
-            Scanner scanner = new Scanner(file1);
+            scanner = new Scanner(file1);
             while (scanner.hasNextLine()) {
                 String data = scanner.nextLine();
                 String[] datas = data.split(", ");
                 if (datas[3].equals(string)) {
+                    scanner.close();
                     return true;
                 }
             }
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+
         return false;
     }
 
@@ -111,6 +115,7 @@ public class Database {
                     maximum = id;
                 }
             }
+            scanner.close();
             return maximum;
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -249,13 +254,15 @@ public class Database {
     }
 
     public boolean ifDepartmentIdExists(File file, String string) {
+        Scanner scanner = null;
         try {
             File file1 = new File(String.valueOf(file));
-            Scanner scanner = new Scanner(file1);
+            scanner = new Scanner(file1);
             while (scanner.hasNextLine()) {
                 String data = scanner.nextLine();
                 String[] datas = data.split(", ");
                 if (datas[0].equals(string)) {
+                    scanner.close();
                     return true;
                 }
             }
@@ -412,13 +419,15 @@ public class Database {
     }
 
     public boolean ifLecturerIdExists(File file, String string) {
+        Scanner scanner = null;
         try {
             File file1 = new File(String.valueOf(file));
-            Scanner scanner = new Scanner(file1);
+            scanner = new Scanner(file1);
             while (scanner.hasNextLine()) {
                 String data = scanner.nextLine();
                 String[] datas = data.split(", ");
                 if (datas[0].equals(string)) {
+                    scanner.close();
                     return true;
                 }
             }

@@ -54,6 +54,7 @@ public class LoginModel {
                     break;
                 }
             }
+            scanner.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
