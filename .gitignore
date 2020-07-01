@@ -1,0 +1,6 @@
+### IntelliJ ###
+.idea/*
+out/*
+### VisualStudioCode ###
+.vscode/*
+!.vscode/launch.json

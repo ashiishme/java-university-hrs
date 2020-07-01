@@ -1,0 +1,16 @@
+{
+  "name": "university-human-resource",
+  "version": "0.1.0",
+  "author": {
+    "email": "contact@ashiish.me",
+    "name": "Ashish Yadav",
+    "url": "https://www.ashiish.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashiishme/java-university-hrs"
+  },
+  "bugs": {
+    "url": "https://github.com/ashiishme/java-university-hrs/issues"
+  }
+}
